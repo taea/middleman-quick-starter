@@ -83,6 +83,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  middleman (~> 3.2)
-  puma (~> 2.7)
-  rake (~> 10.1)
+  middleman
+  puma
+  rake
+
+BUNDLED WITH
+   1.10.6
