@@ -1,0 +1,65 @@
+.btn
+  transition-duration: .3s
+  i
+    font-size: 120%
+    margin-right: 5px
+    color: rgba(white, .5)
+    +relative
+
+    &.fa-pencil-square-o
+      font-size: 140%
+      top: 2px
+
+  &.disabled
+    +opacity(.4)
+
+
+.btn-default
+  background: #EEE
+  border: 1px solid rgba(0,0,0,.25)
+  +box-shadow(rgba(white, 1) 0 1px 0 inset)
+  color: $sub-text-color
+  i
+    color: rgba($sub-text-color, .3)
+  &:hover
+    background: darken(#EEE, 5%)
+    color: $text-color
+    border: 1px solid rgba(0,0,0,.35)
+  &.active
+    border-color: rgba(0,0,0,.35)
+  &:active
+    border-color: rgba(0,0,0,.35)
+
+.btn-primary
+  border: 1px solid rgba(0,0,0,.3)
+  +box-shadow(rgba(white, .3) 0 1px 0 inset)
+
+.btn-dark
+  background: #666
+  border: 1px solid rgba(0,0,0,.5)
+  +box-shadow(rgba(white, .2) 0 1px 0 inset)
+  color: rgba(white, .8)
+  &:hover
+    background: #777
+    color: white
+    border: 1px solid rgba(0,0,0,.6)
+
+.btn-warning, .btn-danger
+  border: 1px solid rgba(0,0,0,.3)
+  +box-shadow(rgba(white, .4) 0 1px 0 inset)
+
+.btn-xlg
+  font-size: 200%
+  +border-radius(6px)
+  padding: 10px 30px
+
+.btn-skeleton
+  color: rgba(white, .9)
+  border: 2px solid rgba(white, .8)
+  background-color: transparent
+  &:hover, &:focus, &:active
+    border: 2px solid white
+    color: $text-color
+    background-color: white
+    i
+      color: $icon-color
