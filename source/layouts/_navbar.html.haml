@@ -1,18 +1,26 @@
+%nav.navbar.navbar-parent{:role => "navigation"}
+  .navbar-header
+    %a.navbar-brand{:href => "/"}
+      =image_tag('logo.svg', width: '150')
+    %form.navbar-form.navbar-right{:role => "form"}
+      .form-group
+        %input.form-control{:placeholder => "Email", :type => "text"}/
+      .form-group
+        %input.form-control{:placeholder => "Password", :type => "password"}/
+      %button.btn.btn-default{:type => "submit"} Sign in
 %nav.navbar.navbar-default{:role => "navigation"}
-  .container
-    .navbar-header
-      %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{:href => "#"} Project name
-    #navbar.navbar-collapse.collapse
-      %form.navbar-form.navbar-right{:role => "form"}
-        .form-group
-          %input.form-control{:placeholder => "Email", :type => "text"}/
-        .form-group
-          %input.form-control{:placeholder => "Password", :type => "password"}/
-        %button.btn.btn-default{:type => "submit"} Sign in
-    / /.navbar-collapse
-/ Main jumbotron for a primary marketing message or call to action
+  .navbar-header
+    %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+      %span.sr-only Toggle navigation
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+  #navbar.navbar-collapse.collapse
+    %nav.nav.navbar-nav
+      - navs = %w(ニュース イベント ショッピング 航空会社 ミリタリー 路線 空港 機材 メンバー 航空フォト 搭乗レビュー)
+      - navs.each do |nav|
+        %li
+          =link_to '#' do
+            %i.fa.fa-shopping-cart
+            = nav
+
