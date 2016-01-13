@@ -9,7 +9,25 @@ title: Welcome to Middleman
     %p
       %a.btn.btn-primary.btn-lg{:href => "#", :role => "button"} Learn more »
 .container
-  / Example row of columns
+  %div
+    / Nav tabs
+    %ul.nav.nav-tabs{:role => "tablist"}
+      %li.active{:role => "presentation"}
+        %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} Home
+      %li{:role => "presentation"}
+        %a{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#profile", :role => "tab"} Profile
+      %li{:role => "presentation"}
+        %a{"aria-controls" => "messages", "data-toggle" => "tab", :href => "#messages", :role => "tab"} Messages
+      %li{:role => "presentation"}
+        %a{"aria-controls" => "settings", "data-toggle" => "tab", :href => "#settings", :role => "tab"} Settings
+    / Tab panes
+    .tab-content
+      #home.tab-pane.active{:role => "tabpanel"} ...1
+      #profile.tab-pane{:role => "tabpanel"} ...2
+      #messages.tab-pane{:role => "tabpanel"} ...3
+      #settings.tab-pane{:role => "tabpanel"} ...4
+
+    / Example row of columns
   .row
     .col-md-4
       %h2 Heading
