@@ -1,0 +1,18 @@
+%nav.navbar.navbar-default{:role => "navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "#"} Project name
+    #navbar.navbar-collapse.collapse
+      %form.navbar-form.navbar-right{:role => "form"}
+        .form-group
+          %input.form-control{:placeholder => "Email", :type => "text"}/
+        .form-group
+          %input.form-control{:placeholder => "Password", :type => "password"}/
+        %button.btn.btn-default{:type => "submit"} Sign in
+    / /.navbar-collapse
+/ Main jumbotron for a primary marketing message or call to action

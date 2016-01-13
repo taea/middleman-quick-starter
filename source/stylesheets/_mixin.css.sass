@@ -1,0 +1,171 @@
+// ==========================================================================
+// balloon
+// --------------------------------------------------------------------------
+=balloon-left($size: 6px, $color: #FFF, $top: 6px)
+  position: relative
+  &:after
+    position: absolute
+    content: ""
+    display: block
+    border: $size solid transparent
+    border-right: $size solid $color
+    top: $top
+    left: -1 * $size * 2
+
+=balloon-left-border($size: 6px, $color: #FFF, $top: 6px, $border_color: #CCC, $border: 1px)
+  position: relative
+  $size2 : $size + $border
+  +balloon-left($size, $color, $top)
+  &:before
+    position: absolute
+    content: ""
+    display: block
+    border: $size2 solid transparent
+    border-right: $size2 solid $border_color
+    top: $top - $border
+    left: -1 * $size2 * 2
+
+=balloon-right($size: 6px, $color: #FFF, $top: 6px)
+  position: relative
+  &:after
+    position: absolute
+    content: ""
+    display: block
+    border: $size solid $color
+    border-right: $size solid transparent
+    border-top: $size solid transparent
+    border-bottom: $size solid transparent
+    top: $top
+    right: -1 * $size * 2
+
+=balloon-right-border($size: 6px, $color: #FFF, $top: 6px, $border_color: #CCC, $border: 1px)
+  position: relative
+  $size2 : $size + $border
+  +balloon-right($size, $color, $top)
+  &:before
+    position: absolute
+    content: ""
+    display: block
+    border: $size2 solid $border_color
+    border-right: $size2 solid transparent
+    border-top: $size2 solid transparent
+    border-bottom: $size2 solid transparent
+    top: $top - $border
+    right: -1 * $size2 * 2
+
+=balloon-top($size: 6px, $color: #FFF, $left: 6px)
+  position: relative
+  &:after
+    position: absolute
+    content: ""
+    display: block
+    border: $size solid $color
+    border-top: $size solid transparent
+    border-left: $size solid transparent
+    border-right: $size solid transparent
+    top: -1 * $size * 2
+    left: $left
+
+=balloon-top-border($size: 6px, $color: #FFF, $left: 6px, $border_color: #CCC, $border: 1px)
+  position: relative
+  $size2 : $size + $border
+  +balloon-top($size, $color, $left)
+  &:before
+    position: absolute
+    content: ""
+    display: block
+    border: $size2 solid $border_color
+    border-top: $size2 solid transparent
+    border-left: $size2 solid transparent
+    border-right: $size2 solid transparent
+    top: -1 * $size2 * 2
+    left: $left - $border
+
+=balloon-bottom($size: 6px, $color: #FFF, $left: 6px)
+  position: relative
+  &:after
+    position: absolute
+    content: ""
+    display: block
+    border: $size solid $color
+    border-bottom: $size solid transparent
+    border-left: $size solid transparent
+    border-right: $size solid transparent
+    bottom: -1 * $size * 2
+    left: $left
+
+=balloon-bottom-border($size: 6px, $color: #FFF, $left: 6px, $border_color: #CCC, $border: 1px)
+  position: relative
+  +balloon-bottom($size, $color, $left)
+  $size2 : $size + $border
+  &:before
+    position: absolute
+    content: ""
+    display: block
+    border: $size2 solid $border_color
+    border-bottom: $size2 solid transparent
+    border-left: $size2 solid transparent
+    border-right: $size2 solid transparent
+    bottom: -1 * $size2 * 2
+    left: $left - $border
+
+// ==========================================================================
+// misc cheat
+// --------------------------------------------------------------------------
+=norepeat
+  background-repeat: no-repeat
+
+=relative($top: auto, $right: auto, $bottom: auto, $left: auto)
+  position: relative
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+
+=absolute($top: auto, $right: auto, $bottom: auto, $left: auto)
+  position: absolute
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+
+=none
+  display: none
+
+=block
+  display: block
+
+=content
+  content: ""
+  display: block
+
+=nowrap
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+=hidden
+  overflow: hidden
+
+=opacity($op: .25)
+  filter: alpha(opacity= $op * 100)
+  -moz-opacity: $op
+  opacity: $op
+
+=placeholder-color($color)
+  +input-placeholder
+    color: $color
+
+=break-word
+  word-wrap: break-word
+  word-break: break-word
+
+=reset-list
+  +reset
+  > li
+    list-style: none
+    +reset
+
+=size($size)
+  width: $size
+  height: $size
