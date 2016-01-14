@@ -1,4 +1,4 @@
-# Middleman Quick Startar
+# Middleman Quick Starter
 
 ![image.png (262.7 kB)](https://img.esa.io/uploads/production/attachments/1/2016/01/13/2/f3e470b2-2e8a-4300-b12f-4d359b708916.png)
 
@@ -25,7 +25,7 @@
 ## Usage
 
 ```
-$ git clone http://github.com/taea/middleman-quick-startar.git mysite && cd mysite
+$ git clone http://github.com/taea/middleman-quick-starter.git mysite && cd mysite
 $ bundle install && bundle exec middleman init .
 $ git add . && git commit -m "brand new site"
 $ heroku create && git push heroku master
