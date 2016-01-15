@@ -2,12 +2,10 @@
   .navbar-header
     %a.navbar-brand{:href => "/"}
       =image_tag('logo.svg', class: 'navbar-brand__image')
-    %form.navbar-form.navbar-right{:role => "form"}
+    %form.navbar-form.navbar-right.navbar-search{:role => "form"}
+      %i.fa.fa-search.navbar-search__icon
       .form-group
-        %input.form-control{:placeholder => "Email", :type => "text"}/
-      .form-group
-        %input.form-control{:placeholder => "Password", :type => "password"}/
-      %button.btn.btn-default{:type => "submit"} Sign in
+        %input.form-control.navbar-search__input{:placeholder => "キーワードで検索", :type => "text"}/
 %nav.navbar.navbar-default{:role => "navigation"}
   .navbar-header
     %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
