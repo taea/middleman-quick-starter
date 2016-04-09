@@ -6,6 +6,7 @@ gem 'middleman', '3.4.1'
 gem 'bootstrap-sass', require: false
 gem 'jquery-middleman', require: false
 gem 'font-awesome-middleman'
+gem 'middleman-autoprefixer'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
