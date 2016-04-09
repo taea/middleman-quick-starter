@@ -70,6 +70,9 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
+    middleman-autoprefixer (2.6.3)
+      autoprefixer-rails (~> 6.2.1)
+      middleman-core (>= 3.3.3)
     middleman-core (3.4.1)
       activesupport (~> 4.1)
       bundler (~> 1.1)
@@ -145,6 +148,7 @@ DEPENDENCIES
   font-awesome-middleman
   jquery-middleman
   middleman (= 3.4.1)
+  middleman-autoprefixer
   middleman-livereload (~> 3.1.0)
   wdm (~> 0.1.0)
 

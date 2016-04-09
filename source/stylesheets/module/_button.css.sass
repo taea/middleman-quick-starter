@@ -3,7 +3,7 @@
   i
     font-size: 120%
     margin-right: 5px
-    color: rgba(white, .5)
+    color: rgba(255, 255, 255, .5)
     +relative
 
     &.fa-pencil-square-o
@@ -17,7 +17,7 @@
 .btn-default
   background: #EEE
   border: 1px solid rgba(0,0,0,.25)
-  +box-shadow(rgba(white, 1) 0 1px 0 inset)
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 1) inset
   color: $sub-text-color
   i
     color: rgba($sub-text-color, .3)
@@ -32,13 +32,13 @@
 
 .btn-primary
   border: 1px solid rgba(0,0,0,.3)
-  +box-shadow(rgba(white, .3) 0 1px 0 inset)
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset
 
 .btn-dark
   background: #666
   border: 1px solid rgba(0,0,0,.5)
-  +box-shadow(rgba(white, .2) 0 1px 0 inset)
-  color: rgba(white, .8)
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .2) inset
+  color: rgba(255, 255, 255, .8)
   &:hover
     background: #777
     color: white
@@ -46,20 +46,20 @@
 
 .btn-warning, .btn-danger
   border: 1px solid rgba(0,0,0,.3)
-  +box-shadow(rgba(white, .4) 0 1px 0 inset)
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .4) inset
 
 .btn-xlg
   font-size: 200%
-  +border-radius(6px)
+  border-radius: 6px
   padding: 10px 30px
 
 .btn-skeleton
-  color: rgba(white, .9)
-  border: 2px solid rgba(white, .8)
+  color: rgba(255, 255, 255, .9)
+  border: 2px solid rgba(255, 255, 255, .8)
   background-color: transparent
   &:hover, &:focus, &:active
-    border: 2px solid white
+    border: 2px solid #FFF
     color: $text-color
-    background-color: white
+    background-color: #FFF
     i
       color: $icon-color
